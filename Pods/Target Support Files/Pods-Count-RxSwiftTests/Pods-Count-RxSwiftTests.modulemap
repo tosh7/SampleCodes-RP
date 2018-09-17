@@ -1,0 +1,6 @@
+framework module Pods_Count_RxSwiftTests {
+  umbrella header "Pods-Count-RxSwiftTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
