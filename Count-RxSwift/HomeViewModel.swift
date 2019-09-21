@@ -11,11 +11,11 @@ import RxSwift
 import RxCocoa
 
 protocol HomeViewModelInputs {
-    func add()
+    func add(number: Int)
 }
 
 protocol HomeViewModelOutputs {
-    var number: Driver<Int> { get }
+    var outputNumber: Driver<Int> { get }
 }
 
 protocol HomeViewModelType {
@@ -24,18 +24,21 @@ protocol HomeViewModelType {
 }
 
 final class HomeViewModel: HomeViewModelType, HomeViewModelInputs, HomeViewModelOutputs {
-    var inputs: HomeViewModelInputs
-    
-    var outputs: HomeViewModelOutputs
-    
-    private let addProperty = PublishSubject<Void>()
-    func add() {
-        addProperty.onNext(())
-    }
-    
-    var number: Driver<Int>
-    
     init(){
-        
+        outputNumber = addProperty
+            .map { number in
+                return number + 1
+            }
+            .asDriverOnErrorJustComplete()
     }
+
+    
+    private let addProperty = PublishSubject<Int>()
+    func add(number: Int) {
+        addProperty.onNext((number))
+    }
+    
+    let outputNumber: Driver<Int>
+    var inputs: HomeViewModelInputs { return self }
+    var outputs: HomeViewModelOutputs { return self }
 }
