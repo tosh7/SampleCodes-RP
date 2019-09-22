@@ -12,6 +12,8 @@ import RxCocoa
 
 protocol HomeViewModelInputs {
     func add(number: Int)
+    func minus(number: Int)
+    func clear()
 }
 
 protocol HomeViewModelOutputs {
@@ -25,17 +27,41 @@ protocol HomeViewModelType {
 
 final class HomeViewModel: HomeViewModelType, HomeViewModelInputs, HomeViewModelOutputs {
     init(){
-        outputNumber = addProperty
+        let addObserver = addProperty
             .map { number in
                 return number + 1
             }
-            .asDriverOnErrorJustComplete()
+        let minusObserver = minusProperty
+            .map { number in
+                return number - 1
+            }
+        let clearObserver = clearProperty
+            .map { _ -> Int in
+                return 0
+            }
+        outputNumber = Observable
+        .merge(
+            addObserver,
+            minusObserver,
+            clearObserver
+        )
+        .asDriverOnErrorJustComplete()
     }
-
+    
     
     private let addProperty = PublishSubject<Int>()
     func add(number: Int) {
         addProperty.onNext((number))
+    }
+    
+    private let minusProperty = PublishSubject<Int>()
+    func minus(number: Int) {
+        minusProperty.onNext((number))
+    }
+    
+    private let clearProperty = PublishSubject<Void>()
+    func clear() {
+        clearProperty.onNext(())
     }
     
     let outputNumber: Driver<Int>

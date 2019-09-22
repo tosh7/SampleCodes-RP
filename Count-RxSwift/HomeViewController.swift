@@ -11,17 +11,6 @@ import RxSwift
 import RxCocoa
 
 final class HomeViewController: UIViewController {
-//    init() {
-//        super.init(nibName: nil, bundle: nil)
-//        viewModel.outputs.outputNumber.drive(onNext: { number in
-//            print(number)
-//        }).disposed(by: disposeBag)
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
     let disposeBag = DisposeBag()
 
     @IBOutlet weak var label: UILabel!
@@ -45,8 +34,10 @@ final class HomeViewController: UIViewController {
         viewModel.inputs.add(number: number)
     }
     @IBAction func minus(_ sender: Any) {
+        viewModel.inputs.minus(number: number)
     }
     @IBAction func clear(_ sender: Any) {
+        viewModel.inputs.clear()
     }
 }
 
