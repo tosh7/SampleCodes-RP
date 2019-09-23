@@ -18,6 +18,7 @@ protocol HomeViewModelInputs {
 
 protocol HomeViewModelOutputs {
     var outputNumber: Driver<Int> { get }
+    var outputNumberState: Driver<NumberState> { get }
 }
 
 protocol HomeViewModelType {
@@ -40,12 +41,28 @@ final class HomeViewModel: HomeViewModelType, HomeViewModelInputs, HomeViewModel
                 return 0
             }
         outputNumber = Observable
-        .merge(
-            addObserver,
-            minusObserver,
-            clearObserver
-        )
-        .asDriverOnErrorJustComplete()
+            .merge(
+                addObserver,
+                minusObserver,
+                clearObserver
+            )
+            .asDriverOnErrorJustComplete()
+        outputNumberState = Observable
+            .merge(
+                addObserver,
+                minusObserver,
+                clearObserver
+            )
+            .map { number -> NumberState in
+                if number >= 10 {
+                    return .moreThanTen
+                } else if number < 0 {
+                    return .negative
+                } else {
+                    return .positive
+                }
+            }
+            .asDriverOnErrorJustComplete()
     }
     
     
@@ -65,6 +82,7 @@ final class HomeViewModel: HomeViewModelType, HomeViewModelInputs, HomeViewModel
     }
     
     let outputNumber: Driver<Int>
+    let outputNumberState: Driver<NumberState>
     var inputs: HomeViewModelInputs { return self }
     var outputs: HomeViewModelOutputs { return self }
 }

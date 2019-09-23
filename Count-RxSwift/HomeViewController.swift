@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum NumberState {
+    case positive
+    case moreThanTen
+    case negative
+}
+
 final class HomeViewController: UIViewController {
     let disposeBag = DisposeBag()
 
@@ -24,10 +30,20 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.outputs.outputNumber.drive(onNext: {[weak self] number in
+        viewModel.outputs.outputNumber.drive(onNext: { [weak self] number in
             self?.label.text = String(number)
             self?.number = number
         }).disposed(by: disposeBag)
+        viewModel.outputs.outputNumberState.drive(onNext: { [weak self] state in
+            switch state {
+            case .positive:
+                self?.label.textColor = UIColor.black
+            case .moreThanTen:
+                self?.label.textColor = UIColor.red
+            case .negative:
+                self?.label.textColor = UIColor.blue
+            }
+            }).disposed(by: disposeBag)
     }
     
     @IBAction func add(_ sender: Any) {
