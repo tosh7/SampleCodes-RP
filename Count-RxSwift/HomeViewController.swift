@@ -17,23 +17,100 @@ enum NumberState {
 }
 
 final class HomeViewController: UIViewController {
-    let disposeBag = DisposeBag()
 
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
-    
-    let viewModel = HomeViewModel()
-    
-    var number: Int = 0
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private let disposeBag = DisposeBag()
+    private let viewModel = HomeViewModel()
+    private var number: Int = 0
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+
+        setupViews()
+        bindings()
+    }
+
+    required init?(coder: NSCoder) { fatalError() }
+
+    private let label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 20)
+        return label
+    }()
+    private lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Add", for: .normal)
+        button.backgroundColor = .red
+        button.addTarget(self, action: #selector(add), for: .touchUpInside)
+        return button
+    }()
+    private lazy var minusButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Minus", for: .normal)
+        button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(minus), for: .touchUpInside)
+        return button
+    }()
+    private lazy var clearButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Clear", for: .normal)
+        button.backgroundColor = .green
+        button.addTarget(self, action: #selector(clear), for: .touchUpInside)
+        return button
+    }()
+
+    @objc func add(_ sender: Any) {
+        viewModel.inputs.add(number: number)
+    }
+
+    @objc func minus(_ sender: Any) {
+        viewModel.inputs.minus(number: number)
+    }
+
+    @objc func clear(_ sender: Any) {
+        viewModel.inputs.clear()
+    }
+
+    private func setupViews() {
+        view.backgroundColor = .white
+
+        view.addSubview(label)
+        view.addSubview(addButton)
+        view.addSubview(minusButton)
+        view.addSubview(clearButton)
+
+        label.translatesAutoresizingMaskIntoConstraints = false
+        addButton.translatesAutoresizingMaskIntoConstraints = false
+        minusButton.translatesAutoresizingMaskIntoConstraints = false
+        clearButton.translatesAutoresizingMaskIntoConstraints = false
+
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+
+        addButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 100).isActive = true
+        addButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        addButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        addButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+
+        minusButton.topAnchor.constraint(equalTo: addButton.bottomAnchor, constant: 100).isActive = true
+        minusButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        minusButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        minusButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+
+        clearButton.topAnchor.constraint(equalTo: minusButton.bottomAnchor, constant: 100).isActive = true
+        clearButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        clearButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        clearButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+
+    private func bindings() {
         viewModel.outputs.outputNumber.drive(onNext: { [weak self] number in
             self?.label.text = String(number)
             self?.number = number
         }).disposed(by: disposeBag)
+
         viewModel.outputs.outputNumberState.drive(onNext: { [weak self] state in
             switch state {
             case .positive:
@@ -43,17 +120,6 @@ final class HomeViewController: UIViewController {
             case .negative:
                 self?.label.textColor = UIColor.blue
             }
-            }).disposed(by: disposeBag)
-    }
-    
-    @IBAction func add(_ sender: Any) {
-        viewModel.inputs.add(number: number)
-    }
-    @IBAction func minus(_ sender: Any) {
-        viewModel.inputs.minus(number: number)
-    }
-    @IBAction func clear(_ sender: Any) {
-        viewModel.inputs.clear()
+        }).disposed(by: disposeBag)
     }
 }
-
