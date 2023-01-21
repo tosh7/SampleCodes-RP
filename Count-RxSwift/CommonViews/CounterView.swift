@@ -83,4 +83,8 @@ final class CounterView: UIView {
     @objc func clear(_ sender: Any) {
         clearClosure?()
     }
+
+    func setNumber(_ number: Int) {
+        label.text = String(number)
+    }
 }
