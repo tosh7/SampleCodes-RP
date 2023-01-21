@@ -1,5 +1,6 @@
 import UIKit
 import Combine
+import SnapKit
 
 final class CombineCounterViewController: UIViewController {
 
@@ -10,7 +11,12 @@ final class CombineCounterViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         view.addSubview(counterView)
-        counterView.translatesAutoresizingMaskIntoConstraints = false
+
+        counterView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+
+        bindings()
     }
 
     required init?(coder: NSCoder) { fatalError() }

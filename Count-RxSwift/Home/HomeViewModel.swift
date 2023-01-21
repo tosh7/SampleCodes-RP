@@ -10,6 +10,6 @@ final class HomeViewModel {
 
     // MARK - Inputs
     func selectItem(indexPath: IndexPath) {
-        nextViewController = RxSwiftCounterViewController()
+        nextViewController = CombineCounterViewController()
     }
 }
