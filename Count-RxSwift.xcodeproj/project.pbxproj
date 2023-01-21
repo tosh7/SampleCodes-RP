@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		192532C5293DEA6200BFD91F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 192532C4293DEA6200BFD91F /* RxCocoa */; };
 		192532C7293DEA6200BFD91F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 192532C6293DEA6200BFD91F /* RxSwift */; };
+		19FC7E3B297C0CFC004CF904 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E3A297C0CFC004CF904 /* CounterView.swift */; };
 		2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */; };
 		2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */; };
 		2B3A7475214F5C8D00EAEA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19FC7E3A297C0CFC004CF904 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		2B3A746A214F5C8B00EAEA39 /* Count-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCounterViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,28 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
+		19FC7E37297C0CB3004CF904 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		19FC7E38297C0CC7004CF904 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		19FC7E39297C0CE5004CF904 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				19FC7E3A297C0CFC004CF904 /* CounterView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
 		2B3A7461214F5C8B00EAEA39 = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */,
+				19FC7E37297C0CB3004CF904 /* Home */,
+				19FC7E38297C0CC7004CF904 /* Combine */,
 				19FC7E36297C0BE2004CF904 /* RxSwift */,
+				19FC7E39297C0CE5004CF904 /* CommonViews */,
 				2B3A7476214F5C8D00EAEA39 /* LaunchScreen.storyboard */,
 				2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */,
 				2B3A7479214F5C8D00EAEA39 /* Info.plist */,
@@ -285,6 +312,7 @@
 				2B9E67C422CF4A50002E0197 /* RxSwiftCounterViewModel.swift in Sources */,
 				2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */,
 				2BDF87672335FDB300C79FE8 /* ObservableType+extension.swift in Sources */,
+				19FC7E3B297C0CFC004CF904 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
