@@ -15,6 +15,7 @@
 		19FC7E43297C1830004CF904 /* CombineCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E42297C1830004CF904 /* CombineCounterViewController.swift */; };
 		19FC7E45297C1838004CF904 /* CombineCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E44297C1838004CF904 /* CombineCounterViewModel.swift */; };
 		19FC7E48297C1C63004CF904 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E47297C1C63004CF904 /* SnapKit */; };
+		19FC7E4A297C46F3004CF904 /* CombineCounterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */; };
 		2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */; };
 		2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */; };
 		2B3A7475214F5C8D00EAEA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		19FC7E3E297C0ECF004CF904 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		19FC7E42297C1830004CF904 /* CombineCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewController.swift; sourceTree = "<group>"; };
 		19FC7E44297C1838004CF904 /* CombineCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewModel.swift; sourceTree = "<group>"; };
+		19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewModelTest.swift; sourceTree = "<group>"; };
 		2B3A746A214F5C8B00EAEA39 /* Count-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCounterViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				19FC7E42297C1830004CF904 /* CombineCounterViewController.swift */,
 				19FC7E44297C1838004CF904 /* CombineCounterViewModel.swift */,
+				19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3A7483214F5C8D00EAEA39 /* Count_RxSwiftTests.swift in Sources */,
+				19FC7E4A297C46F3004CF904 /* CombineCounterViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +540,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Count-RxSwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -556,6 +561,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Count-RxSwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
