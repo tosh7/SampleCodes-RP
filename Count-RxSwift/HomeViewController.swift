@@ -60,11 +60,11 @@ final class HomeViewController: UIViewController {
     }()
 
     @objc func add(_ sender: Any) {
-        viewModel.inputs.add(number: number)
+        viewModel.inputs.add()
     }
 
     @objc func minus(_ sender: Any) {
-        viewModel.inputs.minus(number: number)
+        viewModel.inputs.minus()
     }
 
     @objc func clear(_ sender: Any) {
@@ -106,20 +106,27 @@ final class HomeViewController: UIViewController {
     }
 
     private func bindings() {
-        viewModel.outputs.outputNumber.drive(onNext: { [weak self] number in
-            self?.label.text = String(number)
-            self?.number = number
+        // Inputs
+        addButton.rx.tap.subscribe(onDisposed: { [weak self] in
+            self?.viewModel.inputs.add()
         }).disposed(by: disposeBag)
 
-        viewModel.outputs.outputNumberState.drive(onNext: { [weak self] state in
-            switch state {
-            case .positive:
-                self?.label.textColor = UIColor.black
-            case .moreThanTen:
-                self?.label.textColor = UIColor.red
-            case .negative:
-                self?.label.textColor = UIColor.blue
-            }
-        }).disposed(by: disposeBag)
+
+        // Outputs
+//        viewModel.outputs.outputNumber.drive(onNext: { [weak self] number in
+//            self?.label.text = String(number)
+//            self?.number = number
+//        }).disposed(by: disposeBag)
+//
+//        viewModel.outputs.outputNumberState.drive(onNext: { [weak self] state in
+//            switch state {
+//            case .positive:
+//                self?.label.textColor = UIColor.black
+//            case .moreThanTen:
+//                self?.label.textColor = UIColor.red
+//            case .negative:
+//                self?.label.textColor = UIColor.blue
+//            }
+//        }).disposed(by: disposeBag)
     }
 }
