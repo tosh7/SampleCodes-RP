@@ -10,6 +10,8 @@
 		192532C5293DEA6200BFD91F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 192532C4293DEA6200BFD91F /* RxCocoa */; };
 		192532C7293DEA6200BFD91F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 192532C6293DEA6200BFD91F /* RxSwift */; };
 		19FC7E3B297C0CFC004CF904 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E3A297C0CFC004CF904 /* CounterView.swift */; };
+		19FC7E3D297C0EC7004CF904 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E3C297C0EC7004CF904 /* HomeViewController.swift */; };
+		19FC7E3F297C0ECF004CF904 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E3E297C0ECF004CF904 /* HomeViewModel.swift */; };
 		2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */; };
 		2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */; };
 		2B3A7475214F5C8D00EAEA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		19FC7E3A297C0CFC004CF904 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		19FC7E3C297C0EC7004CF904 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		19FC7E3E297C0ECF004CF904 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2B3A746A214F5C8B00EAEA39 /* Count-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCounterViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		19FC7E37297C0CB3004CF904 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				19FC7E3C297C0EC7004CF904 /* HomeViewController.swift */,
+				19FC7E3E297C0ECF004CF904 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -310,8 +316,10 @@
 				2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */,
 				2BC8EA3422D508D60038EDD0 /* CountModel.swift in Sources */,
 				2B9E67C422CF4A50002E0197 /* RxSwiftCounterViewModel.swift in Sources */,
+				19FC7E3F297C0ECF004CF904 /* HomeViewModel.swift in Sources */,
 				2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */,
 				2BDF87672335FDB300C79FE8 /* ObservableType+extension.swift in Sources */,
+				19FC7E3D297C0EC7004CF904 /* HomeViewController.swift in Sources */,
 				19FC7E3B297C0CFC004CF904 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ enum NumberState {
 final class RxSwiftCounterViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
-    private let viewModel = HomeViewModel()
+    private let viewModel = RxSwiftCounterViewModel()
 
     init() {
         super.init(nibName: nil, bundle: nil)
