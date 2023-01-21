@@ -121,7 +121,6 @@
 			children = (
 				19FC7E42297C1830004CF904 /* CombineCounterViewController.swift */,
 				19FC7E44297C1838004CF904 /* CombineCounterViewModel.swift */,
-				19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				2B3A7482214F5C8D00EAEA39 /* Count_RxSwiftTests.swift */,
+				19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */,
 				2B3A7484214F5C8D00EAEA39 /* Info.plist */,
 			);
 			path = "Count-RxSwiftTests";
