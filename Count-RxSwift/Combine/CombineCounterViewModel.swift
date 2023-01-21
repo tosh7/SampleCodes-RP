@@ -4,8 +4,6 @@ import Combine
 
 final class CombineCounterViewModel {
 
-    private var cancellables: Set<AnyCancellable> = []
-
     // MARK - Outputs
     @Published private(set) var counter: Int = 0
     var labelColor: some Publisher<UIColor, Never> {
