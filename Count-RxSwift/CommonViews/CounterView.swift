@@ -87,4 +87,8 @@ final class CounterView: UIView {
     func setNumber(_ number: Int) {
         label.text = String(number)
     }
+
+    func setLabelColor(_ color: UIColor) {
+        label.textColor = color
+    }
 }

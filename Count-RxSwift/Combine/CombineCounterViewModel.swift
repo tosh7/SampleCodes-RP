@@ -4,17 +4,19 @@ import Combine
 
 final class CombineCounterViewModel {
 
-    init() {}
+    private var cancellables: Set<AnyCancellable> = []
 
     // MARK - Outputs
     @Published private(set) var counter: Int = 0
-    var labelColor: UIColor {
-        if counter == 0 {
-            return .black
-        } else if counter > 0 {
-            return .red
-        } else {
-            return .blue
+    var labelColor: some Publisher<UIColor, Never> {
+        $counter.map {
+            if $0 == 0 {
+                return .black
+            } else if $0 > 0 {
+                return .red
+            } else {
+                return .blue
+            }
         }
     }
 

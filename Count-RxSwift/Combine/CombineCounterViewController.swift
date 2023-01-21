@@ -40,5 +40,9 @@ final class CombineCounterViewController: UIViewController {
             guard let self else { return }
             self.counterView.setNumber(counter)
         }.store(in: &cancellables)
+
+        viewModel.labelColor.sink { [weak self] color in
+            self?.counterView.setLabelColor(color)
+        }.store(in: &cancellables)
     }
 }
