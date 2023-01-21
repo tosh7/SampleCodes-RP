@@ -21,12 +21,12 @@ protocol HomeViewModelOutputs {
 //    var outputNumberState: Driver<NumberState> { get }
 }
 
-protocol HomeViewModelType {
+protocol RxSwiftCounterViewModel {
     var inputs: HomeViewModelInputs { get }
     var outputs: HomeViewModelOutputs { get }
 }
 
-final class HomeViewModel: HomeViewModelType, HomeViewModelInputs, HomeViewModelOutputs {
+final class HomeViewModel: RxSwiftCounterViewModel, HomeViewModelInputs, HomeViewModelOutputs {
     init(){
     }
     

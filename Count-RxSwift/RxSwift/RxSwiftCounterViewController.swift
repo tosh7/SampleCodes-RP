@@ -16,7 +16,7 @@ enum NumberState {
     case negative
 }
 
-final class HomeViewController: UIViewController {
+final class RxSwiftCounterViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
     private let viewModel = HomeViewModel()

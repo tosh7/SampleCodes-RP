@@ -10,12 +10,12 @@
 		192532C5293DEA6200BFD91F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 192532C4293DEA6200BFD91F /* RxCocoa */; };
 		192532C7293DEA6200BFD91F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 192532C6293DEA6200BFD91F /* RxSwift */; };
 		2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */; };
-		2B3A7470214F5C8B00EAEA39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746F214F5C8B00EAEA39 /* HomeViewController.swift */; };
+		2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */; };
 		2B3A7475214F5C8D00EAEA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */; };
 		2B3A7478214F5C8D00EAEA39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A7476214F5C8D00EAEA39 /* LaunchScreen.storyboard */; };
 		2B3A7483214F5C8D00EAEA39 /* Count_RxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A7482214F5C8D00EAEA39 /* Count_RxSwiftTests.swift */; };
 		2B3A748E214F5C8D00EAEA39 /* Count_RxSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A748D214F5C8D00EAEA39 /* Count_RxSwiftUITests.swift */; };
-		2B9E67C422CF4A50002E0197 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E67C322CF4A50002E0197 /* HomeViewModel.swift */; };
+		2B9E67C422CF4A50002E0197 /* RxSwiftCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E67C322CF4A50002E0197 /* RxSwiftCounterViewModel.swift */; };
 		2BC8EA3422D508D60038EDD0 /* CountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC8EA3322D508D60038EDD0 /* CountModel.swift */; };
 		2BDF87672335FDB300C79FE8 /* ObservableType+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF87662335FDB300C79FE8 /* ObservableType+extension.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		2B3A746A214F5C8B00EAEA39 /* Count-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B3A746F214F5C8B00EAEA39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCounterViewController.swift; sourceTree = "<group>"; };
 		2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B3A7477214F5C8D00EAEA39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B3A7479214F5C8D00EAEA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		2B3A7489214F5C8D00EAEA39 /* Count-RxSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Count-RxSwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A748D214F5C8D00EAEA39 /* Count_RxSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count_RxSwiftUITests.swift; sourceTree = "<group>"; };
 		2B3A748F214F5C8D00EAEA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B9E67C322CF4A50002E0197 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2B9E67C322CF4A50002E0197 /* RxSwiftCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCounterViewModel.swift; sourceTree = "<group>"; };
 		2BC8EA3322D508D60038EDD0 /* CountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountModel.swift; sourceTree = "<group>"; };
 		2BDF87662335FDB300C79FE8 /* ObservableType+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19FC7E36297C0BE2004CF904 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2BDF87662335FDB300C79FE8 /* ObservableType+extension.swift */,
+				2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */,
+				2B9E67C322CF4A50002E0197 /* RxSwiftCounterViewModel.swift */,
+				2BC8EA3322D508D60038EDD0 /* CountModel.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
 		2B3A7461214F5C8B00EAEA39 = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */,
-				2B3A746F214F5C8B00EAEA39 /* HomeViewController.swift */,
-				2BDF87662335FDB300C79FE8 /* ObservableType+extension.swift */,
-				2B9E67C322CF4A50002E0197 /* HomeViewModel.swift */,
-				2BC8EA3322D508D60038EDD0 /* CountModel.swift */,
-				2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */,
+				19FC7E36297C0BE2004CF904 /* RxSwift */,
 				2B3A7476214F5C8D00EAEA39 /* LaunchScreen.storyboard */,
+				2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */,
 				2B3A7479214F5C8D00EAEA39 /* Info.plist */,
 			);
 			path = "Count-RxSwift";
@@ -272,9 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B3A7470214F5C8B00EAEA39 /* HomeViewController.swift in Sources */,
+				2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */,
 				2BC8EA3422D508D60038EDD0 /* CountModel.swift in Sources */,
-				2B9E67C422CF4A50002E0197 /* HomeViewModel.swift in Sources */,
+				2B9E67C422CF4A50002E0197 /* RxSwiftCounterViewModel.swift in Sources */,
 				2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */,
 				2BDF87672335FDB300C79FE8 /* ObservableType+extension.swift in Sources */,
 			);
