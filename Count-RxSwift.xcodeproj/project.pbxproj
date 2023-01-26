@@ -16,6 +16,8 @@
 		19FC7E45297C1838004CF904 /* CombineCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E44297C1838004CF904 /* CombineCounterViewModel.swift */; };
 		19FC7E48297C1C63004CF904 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E47297C1C63004CF904 /* SnapKit */; };
 		19FC7E4A297C46F3004CF904 /* CombineCounterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */; };
+		19FC7E4D297C5159004CF904 /* CombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E4C297C5159004CF904 /* CombineView.swift */; };
+		19FC7E4F297C5162004CF904 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E4E297C5162004CF904 /* CombineViewModel.swift */; };
 		2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */; };
 		2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */; };
 		2B3A7475214F5C8D00EAEA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		19FC7E42297C1830004CF904 /* CombineCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewController.swift; sourceTree = "<group>"; };
 		19FC7E44297C1838004CF904 /* CombineCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewModel.swift; sourceTree = "<group>"; };
 		19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewModelTest.swift; sourceTree = "<group>"; };
+		19FC7E4C297C5159004CF904 /* CombineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineView.swift; sourceTree = "<group>"; };
+		19FC7E4E297C5162004CF904 /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 		2B3A746A214F5C8B00EAEA39 /* Count-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCounterViewController.swift; sourceTree = "<group>"; };
@@ -116,13 +120,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		19FC7E38297C0CC7004CF904 /* Combine */ = {
+		19FC7E38297C0CC7004CF904 /* Combine-UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				19FC7E42297C1830004CF904 /* CombineCounterViewController.swift */,
 				19FC7E44297C1838004CF904 /* CombineCounterViewModel.swift */,
 			);
-			path = Combine;
+			path = "Combine-UIKit";
 			sourceTree = "<group>";
 		};
 		19FC7E39297C0CE5004CF904 /* CommonViews */ = {
@@ -131,6 +135,15 @@
 				19FC7E3A297C0CFC004CF904 /* CounterView.swift */,
 			);
 			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		19FC7E4B297C5121004CF904 /* Combine-SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				19FC7E4C297C5159004CF904 /* CombineView.swift */,
+				19FC7E4E297C5162004CF904 /* CombineViewModel.swift */,
+			);
+			path = "Combine-SwiftUI";
 			sourceTree = "<group>";
 		};
 		2B3A7461214F5C8B00EAEA39 = {
@@ -158,7 +171,8 @@
 			children = (
 				2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */,
 				19FC7E37297C0CB3004CF904 /* Home */,
-				19FC7E38297C0CC7004CF904 /* Combine */,
+				19FC7E38297C0CC7004CF904 /* Combine-UIKit */,
+				19FC7E4B297C5121004CF904 /* Combine-SwiftUI */,
 				19FC7E36297C0BE2004CF904 /* RxSwift */,
 				19FC7E39297C0CE5004CF904 /* CommonViews */,
 				2B3A7476214F5C8D00EAEA39 /* LaunchScreen.storyboard */,
@@ -335,6 +349,8 @@
 				2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */,
 				2BDF87672335FDB300C79FE8 /* ObservableType+extension.swift in Sources */,
 				19FC7E3D297C0EC7004CF904 /* HomeViewController.swift in Sources */,
+				19FC7E4D297C5159004CF904 /* CombineView.swift in Sources */,
+				19FC7E4F297C5162004CF904 /* CombineViewModel.swift in Sources */,
 				19FC7E3B297C0CFC004CF904 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
