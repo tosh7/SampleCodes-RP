@@ -16,9 +16,10 @@ final class CombineViewModel: ObservableObject {
         }
     }
 
-    @Published private(set) var items: [SectionModel] = []
-
     init() {}
 
+    // MARK - Outputs
+    @Published private(set) var items: [SectionModel] = []
 
+    // MARK - Inputs
 }
