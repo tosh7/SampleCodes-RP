@@ -18,6 +18,10 @@
 		19FC7E4A297C46F3004CF904 /* CombineCounterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E49297C46F3004CF904 /* CombineCounterViewModelTest.swift */; };
 		19FC7E4D297C5159004CF904 /* CombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E4C297C5159004CF904 /* CombineView.swift */; };
 		19FC7E4F297C5162004CF904 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E4E297C5162004CF904 /* CombineViewModel.swift */; };
+		19FC7E522982F0A5004CF904 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E512982F0A5004CF904 /* AsyncAlgorithms */; };
+		19FC7E542982F0A5004CF904 /* AsyncAlgorithms_XCTest in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E532982F0A5004CF904 /* AsyncAlgorithms_XCTest */; };
+		19FC7E562982F0A5004CF904 /* AsyncSequenceValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E552982F0A5004CF904 /* AsyncSequenceValidation */; };
+		19FC7E582982F0A5004CF904 /* _CAsyncSequenceValidationSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E572982F0A5004CF904 /* _CAsyncSequenceValidationSupport */; };
 		2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */; };
 		2B3A7470214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746F214F5C8B00EAEA39 /* RxSwiftCounterViewController.swift */; };
 		2B3A7475214F5C8D00EAEA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A7474214F5C8D00EAEA39 /* Assets.xcassets */; };
@@ -78,8 +82,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				19FC7E48297C1C63004CF904 /* SnapKit in Frameworks */,
+				19FC7E562982F0A5004CF904 /* AsyncSequenceValidation in Frameworks */,
 				192532C7293DEA6200BFD91F /* RxSwift in Frameworks */,
+				19FC7E582982F0A5004CF904 /* _CAsyncSequenceValidationSupport in Frameworks */,
 				192532C5293DEA6200BFD91F /* RxCocoa in Frameworks */,
+				19FC7E522982F0A5004CF904 /* AsyncAlgorithms in Frameworks */,
+				19FC7E542982F0A5004CF904 /* AsyncAlgorithms_XCTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +229,10 @@
 				192532C4293DEA6200BFD91F /* RxCocoa */,
 				192532C6293DEA6200BFD91F /* RxSwift */,
 				19FC7E47297C1C63004CF904 /* SnapKit */,
+				19FC7E512982F0A5004CF904 /* AsyncAlgorithms */,
+				19FC7E532982F0A5004CF904 /* AsyncAlgorithms_XCTest */,
+				19FC7E552982F0A5004CF904 /* AsyncSequenceValidation */,
+				19FC7E572982F0A5004CF904 /* _CAsyncSequenceValidationSupport */,
 			);
 			productName = "Count-RxSwift";
 			productReference = 2B3A746A214F5C8B00EAEA39 /* Count-RxSwift.app */;
@@ -297,6 +309,7 @@
 			packageReferences = (
 				192532C3293DEA6200BFD91F /* XCRemoteSwiftPackageReference "RxSwift" */,
 				19FC7E46297C1C63004CF904 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 			);
 			productRefGroup = 2B3A746B214F5C8B00EAEA39 /* Products */;
 			projectDirPath = "";
@@ -687,6 +700,14 @@
 				kind = branch;
 			};
 		};
+		19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -704,6 +725,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 19FC7E46297C1C63004CF904 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		19FC7E512982F0A5004CF904 /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
+		};
+		19FC7E532982F0A5004CF904 /* AsyncAlgorithms_XCTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms_XCTest;
+		};
+		19FC7E552982F0A5004CF904 /* AsyncSequenceValidation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncSequenceValidation;
+		};
+		19FC7E572982F0A5004CF904 /* _CAsyncSequenceValidationSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = _CAsyncSequenceValidationSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
