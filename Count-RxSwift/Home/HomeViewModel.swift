@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SwiftUI
 import Combine
 
 final class HomeViewModel {
@@ -22,11 +23,12 @@ final class HomeViewModel {
     // MARK - OutPuts
     @Published private(set) var nextViewController: UIViewController?
     @Published private(set) var items: [SectionModel] = [
-        .init(name: "UIKitUI * Combine", vc: CombineCounterViewController())
+        .init(name: "UIKitUI * Combine", vc: CombineCounterViewController()),
+        .init(name: "SwiftUI * Combine", vc: UIHostingController(rootView: CombineView()))
     ]
 
     // MARK - Inputs
     func selectItem(indexPath: IndexPath) {
-        nextViewController = CombineCounterViewController()
+        nextViewController = items[indexPath.item].vc
     }
 }

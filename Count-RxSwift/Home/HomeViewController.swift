@@ -61,7 +61,7 @@ extension HomeViewController {
 
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
         snapshot.appendSections([.main])
-        snapshot.appendItems([viewModel.items.count])
+        snapshot.appendItems(Array(0..<2))
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
