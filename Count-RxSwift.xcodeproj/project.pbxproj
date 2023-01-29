@@ -19,7 +19,6 @@
 		19FC7E4D297C5159004CF904 /* CombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E4C297C5159004CF904 /* CombineView.swift */; };
 		19FC7E4F297C5162004CF904 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7E4E297C5162004CF904 /* CombineViewModel.swift */; };
 		19FC7E522982F0A5004CF904 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E512982F0A5004CF904 /* AsyncAlgorithms */; };
-		19FC7E542982F0A5004CF904 /* AsyncAlgorithms_XCTest in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E532982F0A5004CF904 /* AsyncAlgorithms_XCTest */; };
 		19FC7E562982F0A5004CF904 /* AsyncSequenceValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E552982F0A5004CF904 /* AsyncSequenceValidation */; };
 		19FC7E582982F0A5004CF904 /* _CAsyncSequenceValidationSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 19FC7E572982F0A5004CF904 /* _CAsyncSequenceValidationSupport */; };
 		2B3A746E214F5C8B00EAEA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A746D214F5C8B00EAEA39 /* AppDelegate.swift */; };
@@ -87,7 +86,6 @@
 				19FC7E582982F0A5004CF904 /* _CAsyncSequenceValidationSupport in Frameworks */,
 				192532C5293DEA6200BFD91F /* RxCocoa in Frameworks */,
 				19FC7E522982F0A5004CF904 /* AsyncAlgorithms in Frameworks */,
-				19FC7E542982F0A5004CF904 /* AsyncAlgorithms_XCTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +106,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193E0D042986365700EB28D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		19FC7E36297C0BE2004CF904 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +166,7 @@
 				2B3A7481214F5C8D00EAEA39 /* Count-RxSwiftTests */,
 				2B3A748C214F5C8D00EAEA39 /* Count-RxSwiftUITests */,
 				2B3A746B214F5C8B00EAEA39 /* Products */,
+				193E0D042986365700EB28D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,7 +236,6 @@
 				192532C6293DEA6200BFD91F /* RxSwift */,
 				19FC7E47297C1C63004CF904 /* SnapKit */,
 				19FC7E512982F0A5004CF904 /* AsyncAlgorithms */,
-				19FC7E532982F0A5004CF904 /* AsyncAlgorithms_XCTest */,
 				19FC7E552982F0A5004CF904 /* AsyncSequenceValidation */,
 				19FC7E572982F0A5004CF904 /* _CAsyncSequenceValidationSupport */,
 			);
@@ -252,6 +257,8 @@
 				2B3A7480214F5C8D00EAEA39 /* PBXTargetDependency */,
 			);
 			name = "Count-RxSwiftTests";
+			packageProductDependencies = (
+			);
 			productName = "Count-RxSwiftTests";
 			productReference = 2B3A747E214F5C8D00EAEA39 /* Count-RxSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -730,11 +737,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
 			productName = AsyncAlgorithms;
-		};
-		19FC7E532982F0A5004CF904 /* AsyncAlgorithms_XCTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 19FC7E502982F0A5004CF904 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
-			productName = AsyncAlgorithms_XCTest;
 		};
 		19FC7E552982F0A5004CF904 /* AsyncSequenceValidation */ = {
 			isa = XCSwiftPackageProductDependency;
