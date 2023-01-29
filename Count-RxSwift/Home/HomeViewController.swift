@@ -48,9 +48,10 @@ extension HomeViewController {
     }
 
     private func configureDataSource() {
-        let celRRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Int> { (cell, indexPath, item) in
+        let celRRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Int> { [weak self] (cell, indexPath, item) in
+            guard let self else { return }
             var content = cell.defaultContentConfiguration()
-            content.text = "\(item)"
+            content.text = self.viewModel.items[indexPath.item].name
             cell.contentConfiguration = content
         }
 
@@ -60,7 +61,7 @@ extension HomeViewController {
 
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(Array(0..<12))
+        snapshot.appendItems([viewModel.items.count])
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }

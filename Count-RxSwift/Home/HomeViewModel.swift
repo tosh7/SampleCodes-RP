@@ -21,7 +21,9 @@ final class HomeViewModel {
 
     // MARK - OutPuts
     @Published private(set) var nextViewController: UIViewController?
-    @Published private(set) var items: [SectionModel] = []
+    @Published private(set) var items: [SectionModel] = [
+        .init(name: "UIKitUI * Combine", vc: CombineCounterViewController())
+    ]
 
     // MARK - Inputs
     func selectItem(indexPath: IndexPath) {
